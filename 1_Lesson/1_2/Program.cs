@@ -1,36 +1,37 @@
 ﻿//string num_str = Console.ReadLine();
 //int num = int.Parse(num_str);
 
+Console.WriteLine("Введите номер дня недели.");
 int day = int.Parse(Console.ReadLine());
 
 
 if (day == 1)
 {
-    Console.WriteLine("Понедельник");
+    Console.WriteLine("Введенному номеру соответствует день недели - Понедельник");
 }
 else if (day == 2)
 {
-    Console.WriteLine("Вторник");
+    Console.WriteLine("Введенному номеру соответствует день недели - Вторник");
 }
 else if (day == 3)
 {
-    Console.WriteLine("Среда");
+    Console.WriteLine("Введенному номеру соответствует день недели - Среда");
 }
 else if (day == 4)
 {
-    Console.WriteLine("Четверг");
+    Console.WriteLine("Введенному номеру соответствует день недели - Четверг");
 }
 else if (day == 5)
 {
-    Console.WriteLine("Пятница");
+    Console.WriteLine("Введенному номеру соответствует день недели - Пятница");
 }
 else if (day == 6)
 {
-    Console.WriteLine("Суббота");
+    Console.WriteLine("Введенному номеру соответствует день недели - Суббота");
 }
-else (day == 7);
+else if(day == 7)
 {
-    Console.WriteLine("Воскресенье");
+    Console.WriteLine("Введенному номеру соответствует день недели - Воскресенье");
 }
 
 
