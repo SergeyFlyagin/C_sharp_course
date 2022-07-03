@@ -12,7 +12,7 @@ while (number > 0)
 }
 if(num == Temp)
 {
-   Console.WriteLine($"{num} -> Введенное число, является палиндромом"); 
+   Console.WriteLine($"{num} -> Введенное число, является палиндромом!"); 
 } 
 else
-Console.WriteLine($"{num} -> Введенное число, не является палиндромом");
+Console.WriteLine($"{num} -> Введенное число, не является палиндромом!");
