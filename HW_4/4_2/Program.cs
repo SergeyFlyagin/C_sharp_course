@@ -19,7 +19,7 @@ int Sumnums(int num)
     int n_sum = 0;
     for (int i = num; i != 0; i /= 10)
     {
-        n_sum +== num / 10;
+        n_sum += num / 10;
     }
     return n_sum;
 }
