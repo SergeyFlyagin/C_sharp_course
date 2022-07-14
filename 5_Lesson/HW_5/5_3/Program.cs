@@ -2,7 +2,7 @@
 // разницу между максимальным и минимальным
 // элементов массива.
 
-void Print(int[] arr)
+void Print(double[] arr)
 {
     int size = arr.Length;
     for (int i = 0; i < size; i++)
@@ -12,22 +12,24 @@ void Print(int[] arr)
     Console.WriteLine();
 }
 
-int[] MassNums(int size)
+double[] MassNums(int size)
 {
-    int[] arr = new int[size];
-    for (int i = 0; i < size; i++)
+    double[] arr = new double[size];
+    Random n_new = new Random();
+
+    for (int i = 1; i < size; i++)
     {
-        arr[i] = new Random().Next(1, 50);
+        arr[i] = Math.Round(n_new.NextDouble() * (10 + 12) - 10, 2);
     }
     return arr;
 }
 
-void SumNum(int[] arr)
+void SumNum(double[] arr)
 {
-    int s_max = 0;
-    int s_min = 50;
-    int temp;
-    for (int i = 0; i < arr.Length; i++)
+    double s_max = arr[0];
+    double s_min = arr[0];
+
+    for (int i = 1; i < arr.Length; i++)
     {
 
         if (arr[i] > s_max)
@@ -40,10 +42,11 @@ void SumNum(int[] arr)
         }
 
     }
-    temp = s_max - s_min;
-    Console.WriteLine($"{s_max} - {s_min} = {temp}");
+    Console.Write ($"Max {s_max}, Min {s_min}. ");
+    Console.WriteLine($" Разница {s_max} - ({s_min}) = {Math.Round(s_max - s_min, 2)}");
 }
-int[] arr_1 = MassNums(10);
+   
+double[] arr_1 = MassNums(10);
 Print(arr_1);
 SumNum(arr_1);
 
