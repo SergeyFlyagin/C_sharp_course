@@ -23,7 +23,7 @@ void FillArray(int[,] matr)
         }
     }
 }
-void CopyArray(int[,] matr)
+int[,] CopyArray(int[,] matr)
 {
     int row = matr.GetLength(0);
     int column = matr.GetLength(1);
@@ -35,11 +35,12 @@ void CopyArray(int[,] matr)
             new_matr[i, j] = matr[i, j];
         }
     }
+    return new_matr;
 }
 int[,] matrix = new int[3, 4];
 FillArray(matrix);
 Console.WriteLine();
 PrintArray(matrix);
 Console.WriteLine();
-int[,] new_matrix = new int[3, 4];
-CopyArray(new_matrix);
+int[,] new_matrix = CopyArray(matrix);
+PrintArray(new_matrix);
